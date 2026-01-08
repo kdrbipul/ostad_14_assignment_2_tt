@@ -22,7 +22,7 @@ List<CityItem> cityItem = [
     name: 'Paris',
     image: 'assets/image/paris.jpg',
     ratting: '4.0',
-    price: '${100}',
+    price: '${99}',
   ),
   CityItem(
     name: 'Tokyo',
