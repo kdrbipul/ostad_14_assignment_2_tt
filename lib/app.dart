@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ostad_14_assignment_2_tt/city_list.dart';
+import 'package:ostad_14_assignment_2_tt/home_screen.dart';
 class App extends StatelessWidget {
   const App({super.key});
 
@@ -12,7 +12,7 @@ class App extends StatelessWidget {
           useMaterial3: true,
           scaffoldBackgroundColor: Colors.grey.shade200,
           appBarTheme: const AppBarTheme(
-            backgroundColor: Colors.lime,
+            backgroundColor: Colors.blue,
             centerTitle: true,
             titleTextStyle: TextStyle(
               color: Colors.white,
@@ -32,9 +32,19 @@ class App extends StatelessWidget {
             ),
             prefixIconColor: Colors.grey,
             suffixIconColor: Colors.grey,
+          ),
+          elevatedButtonTheme: ElevatedButtonThemeData(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.blue,
+              foregroundColor: Colors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+              elevation: 3,
+            )
           )
         ),
-        home: CityList(),
+        home: HomeScreen(),
       ),
     );
   }
