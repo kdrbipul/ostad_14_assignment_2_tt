@@ -9,7 +9,7 @@ class DestinationCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 265,
+      height: 260,
       width: 390,
       child: Expanded(
         child: GridView.builder(
