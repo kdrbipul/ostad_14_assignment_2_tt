@@ -21,6 +21,7 @@ class TrendingCard extends StatelessWidget {
           // color: Colors.green,
           elevation: 3,
           child: Row(
+            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Image(
                 image: AssetImage(city.image),
@@ -41,6 +42,7 @@ class TrendingCard extends StatelessWidget {
                   ),
                   SizedBox(height: 5),
                   Row(
+                    // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Icon(Icons.watch_later_outlined, size: 18),
                       SizedBox(width: 5),
@@ -48,24 +50,27 @@ class TrendingCard extends StatelessWidget {
                     ],
                   ),
                   SizedBox(height: 5),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Text(
-                        city.price,
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.blue
+                  SizedBox(
+                    width: 270,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          city.price,
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.blue
+                          ),
                         ),
-                      ),
-                      SizedBox(width: 135),
-                      ElevatedButton(
-                        onPressed: () {},
-                        child: Text('Book Now'),
-                      ),
-                    ],
+                        // SizedBox(width: 135),
+                        ElevatedButton(
+                          onPressed: () {},
+                          child: Text('Book Now'),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
