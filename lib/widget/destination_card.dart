@@ -10,7 +10,7 @@ class DestinationCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 260,
-      width: 390,
+      width: double.infinity,
       child: GridView.builder(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 3,
@@ -26,17 +26,26 @@ class DestinationCard extends StatelessWidget {
             elevation: 3,
             child: Stack(
               children: [
-                Image(
-                  image: AssetImage(city.image),
-                  fit: BoxFit.cover,
-                  height: double.infinity,
-                  width: double.infinity,
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(10),
+                  child: Image(
+                    image: AssetImage(city.image),
+                    fit: BoxFit.cover,
+                    height: double.infinity,
+                    width: double.infinity,
+                  ),
                 ),
                 Positioned(
                   bottom: 0,
                   left: 0,
                   right: 0,
                   child: Container(
+                    // decoration: BoxDecoration(
+                    //   borderRadius: BorderRadius.only(
+                    //     bottomLeft: Radius.circular(10),
+                    //     bottomRight: Radius.circular(10),
+                    //   )
+                    // ),
                     height: 30,
                     width: 150,
                     color: Colors.grey.shade400,

@@ -8,11 +8,17 @@ class TopBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Image(
-          image: AssetImage('assets/image/london.jpg'),
-          fit: BoxFit.cover,
-          height: 270,
-          width: double.infinity,
+        ClipRRect(
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(20),
+              topRight:Radius.circular(20),
+          ),
+          child: Image(
+            image: AssetImage('assets/image/london.jpg'),
+            fit: BoxFit.cover,
+            height: 270,
+            width: double.infinity,
+          ),
         ),
         Container(
           height: 270,
