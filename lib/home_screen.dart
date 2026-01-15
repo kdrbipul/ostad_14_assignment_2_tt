@@ -15,11 +15,14 @@ class HomeScreen extends StatelessWidget {
         title: const Text('City List'),
         centerTitle: true,
         actions: [
-          CircleAvatar(
-            backgroundImage: Image(
-              image: AssetImage('assets/image/profile.png'),
-            ).image,
-            radius: 20,
+          Padding(
+            padding: const EdgeInsets.all(6.0),
+            child: CircleAvatar(
+              backgroundImage: Image(
+                image: AssetImage('assets/image/profile.png'),
+              ).image,
+              radius: 20,
+            ),
           ),
         ],
       ),

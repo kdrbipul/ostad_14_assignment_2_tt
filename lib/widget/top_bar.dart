@@ -9,9 +9,8 @@ class TopBar extends StatelessWidget {
     return Stack(
       children: [
         ClipRRect(
-          borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(20),
-              topRight:Radius.circular(20),
+          borderRadius: BorderRadius.circular(
+              20
           ),
           child: Image(
             image: AssetImage('assets/image/london.jpg'),

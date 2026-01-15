@@ -16,6 +16,7 @@ class DestinationCard extends StatelessWidget {
         physics: NeverScrollableScrollPhysics(),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
+          crossAxisSpacing: 6,
         ),
         itemCount: cityItem.length - 5 ,
         itemBuilder: (context, index) {
