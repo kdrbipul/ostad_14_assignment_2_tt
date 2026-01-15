@@ -9,13 +9,15 @@ class DestinationCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 260,
+      height: 200,
       width: double.infinity,
       child: GridView.builder(
+        shrinkWrap: true,
+        physics: NeverScrollableScrollPhysics(),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 3,
+          crossAxisCount: 2,
         ),
-        itemCount: cityItem.length - 1,
+        itemCount: cityItem.length - 5 ,
         itemBuilder: (context, index) {
           final city = cityItem.elementAt(index);
           return Card(
@@ -40,15 +42,14 @@ class DestinationCard extends StatelessWidget {
                   left: 0,
                   right: 0,
                   child: Container(
-                    // decoration: BoxDecoration(
-                    //   borderRadius: BorderRadius.only(
-                    //     bottomLeft: Radius.circular(10),
-                    //     bottomRight: Radius.circular(10),
-                    //   )
-                    // ),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(10),
+                        bottomRight: Radius.circular(10),
+                      )
+                    ),
                     height: 30,
                     width: 150,
-                    color: Colors.grey.shade400,
                   ),
                 ),
                 Positioned(
